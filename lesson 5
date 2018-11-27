@@ -1,0 +1,52 @@
+import re
+
+
+result = re.match(".", "привет")
+print(result)
+
+result = re.match("ч\w?", "ч1 65")
+print(result)
+
+result = re.match(r"ab+", "abbb")
+print(result)
+
+result = re.match(r"ab+", "a")
+print(result)
+
+result = re.match(r"ab*", "abbb")
+print(result)
+
+result = re.match(r"ab*", "a")
+print(result)
+
+result = re.match(r"ab*c", "ac")
+print(result)
+
+
+result = re.search(r"\w{2}", "ererg")
+print(result)
+
+result = re.findall(r"\w{2}", "erergy")
+print(result)
+
+# подходит ли строка под регулярное выражение 
+result = re.match(r"[\w\-\.\_]+@[\w\-]+\.com", "vasya.pupkin@mail.com")
+print(result)
+
+# поиск подстроки в строке 
+
+result = re.search(r"слов." , "он сказал слово и оно был не первым словом")
+print (result)
+
+# поиск подстрок в строке 
+result = re.findall(r"слов\w?", "было сказано много слов, но слово его было первым словом")
+print (result)
+
+# разбиение строк 
+result = re.split("[\.,;:\? ]+" , "я монсчтрозный, ужасающий текст: почему? потому;")
+print (result)
+
+
+# замена подстрок
+result  = re.sub(r"\w+", "(я слово)", "я мострозубый, ужасный текст: почему? потому;")
+print (result)
