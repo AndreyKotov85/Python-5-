@@ -1,1 +1,21 @@
-hello
+class Animal: 
+  color = "green"
+  pop ="90"
+
+  def __init__(self,name):
+    self.name = name
+
+class Cow(Animal): # наследование 
+  color = "white"
+  weight = 200
+
+cow = Cow("murka")
+a = Animal("anything")
+
+print (cow.weight)
+print (cow.color)
+print(cow.pop)
+print(a.color)
+print(a.weight)
+
+
